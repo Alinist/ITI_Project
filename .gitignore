@@ -1,25 +1,56 @@
-# Python
+# Python cache files
 __pycache__/
 *.py[cod]
-*.so
+*$py.class
 
-# Environment
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Django
+# Django stuff:
+*.sqlite3
 *.log
 *.pot
 *.pyc
-db.sqlite3
-media/
+*.mo
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+
+# Static files (optional: if you collectstatic to a separate folder)
 staticfiles/
 
-# VSCode
+# VSCode or IDE settings
 .vscode/
+.idea/
 
-# macOS
+# MacOS
 .DS_Store
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyo
+*.pyd
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Pytest cache
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+
+# Unit test / coverage reports
+.tox/
+nosetests.xml
+coverage.xml
