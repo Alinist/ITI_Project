@@ -1,0 +1,1 @@
+web: gunicorn iti_project.wsgi
