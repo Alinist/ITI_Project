@@ -1,0 +1,68 @@
+{% extends "components/base.html" %}
+{% load static %}
+
+{% block content %}
+<h1 class="text-center-white">Welcome to your Dashboard, {{ user.username }}!</h1>
+<p class="text-center">Here you can manage your records and access various features of the CRM.</p>
+
+<!--SEARCH IN THE SAME THEME-->
+<div class="search-container form-layout">
+  <form method="GET" action="{% url 'search' %}" class="search-form">
+    {% if query %}
+    <input type="text" name="q" placeholder="Search records..." class="search-input" value="{{ query }}">
+    {% else %}
+    <input type="text" name="q" placeholder="Search records..." class="search-input">
+    {% endif %}
+    <div class="text-center mt-4">
+      <button type="submit" class="btn btn-light btn-shared">Search</button>
+    </div>
+  </form>
+</div>
+
+<div class="form-layout table-container">
+  <div class="table-container">
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Full Name</th>
+          <th>Department</th>
+          <th>Phone</th>
+          <th>Address</th>
+          <th>Height</th>
+          <th>Weight</th>
+          <th>Date Joined</th>
+          <th>View</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for record in records %}
+        <tr>
+          <td>{{ record.id }}</td>
+          <td>{{ record.first_name }} {{ record.last_name }}</td>
+          <td>{{ record.category }}</td>
+          <td>{{ record.phone }}</td>
+          <td>{{ record.address }}</td>
+          <td>{{ record.height }}</td>
+          <td>{{ record.weight }}</td>
+          <td>{{ record.created_at|date:"F j, Y" }}</td>
+          <td>
+            <a href="{% url 'view_record' record.id %}" class="btn-shared text-decoration-none text-center">View</a>
+          </td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="9" class="text-center-muted">No records found.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="d-flex-center">
+  <a href="{% url 'add_record' %}">
+    <button type="button" class="btn-shared">Create Record</button>
+  </a>
+</div>
+{% endblock %}

@@ -1,0 +1,239 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home-hero {
+  background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80') no-repeat center center;
+  background-size: cover;
+  min-height: 400px;
+  padding: 60px 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.dashboard-hero {
+  background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80') no-repeat center center;
+  background-size: cover;
+  min-height: 200px;
+  padding: 60px 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-hero .record-title {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.home-hero .record-subtitle {
+  font-size: 1.5rem;
+}
+
+
+h1,
+.record-title,
+.text-center-white {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.record-subtitle,
+.text-center-muted {
+  text-align: center;
+  color: #999999;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-layout {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px 40px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  color: #ccc;
+}
+
+form p {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ccc;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+}
+
+input:focus {
+  border-color: #f1f1f1;
+  outline: none;
+}
+
+.table-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.custom-table {
+  width: 100%;
+  min-width: 1000px;
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border-collapse: collapse;
+  border: 1px solid #444;
+}
+
+.custom-table thead {
+  background-color: #2a2a2a;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 12px;
+  border: 1px solid #444;
+  text-align: center;
+}
+
+.record-details p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.record-details strong {
+  color: #ffffff;
+}
+
+.btn-shared {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ffffff;
+  color: #121212;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  text-align: center;
+}
+
+.btn-shared:hover,
+.btn-shared:focus {
+  background-color: #e0e0e0;
+  border-color: #bbb;
+  color: #121212;
+}
+
+.btn-shared.full-width {
+  width: 100%;
+}
+
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.errorlist {
+  color: #ff6b6b;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.error-page {
+  padding: 60px 20px;
+}
+
+.error-code {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.error-subtitle {
+  margin-bottom: 30px;
+}
+
+.error-message {
+  margin-bottom: 40px;
+}
+
+
+.toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.toast-message {
+  cursor: pointer;
+  min-width: 250px;
+  margin-top: 10px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  background-color: #1E1E1E;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: auto; /* important to enable clicks */
+}
+
+.toast-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast-message.hide {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.toast-success {
+  border: 2px solid #198754; /* nice green */
+  color: #fff;
+}
+
+.toast-error, .toast-danger {
+  border: 2px solid #dc3545; /* bootstrap red */
+  color: #fff;
+}
+
+.toast-warning {
+  border: 2px solid #ffc107; /* bootstrap yellow */
+  color: #fff;
+}
+
+.toast-info {
+  border: 1px solid #fff;   /* Bootstrap info blue */
+  background-color: #212529;   /* very dark navy */
+  color: #fff;              /* pale blue text */
+}
+
+

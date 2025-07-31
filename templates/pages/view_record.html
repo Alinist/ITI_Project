@@ -1,0 +1,34 @@
+{% extends "components/base.html" %}
+
+{% block content %}
+<h1 class="mb-4">Record Details</h1>
+<p class="mb-4 text-center">Here you can view the details of the selected record.</p>
+
+<div class="form-layout">
+  <h2 class="text-center mb-4 text-white">
+    {{ record.first_name }} {{ record.last_name }}
+  </h2>
+
+  <div >
+    <p><strong class="text-white">Department:</strong> {{ record.category }}</p>
+    <p><strong class="text-white">Phone:</strong> {{ record.phone }}</p>
+    <p><strong class="text-white">Address:</strong> {{ record.address }}</p>
+    <p><strong class="text-white">Height:</strong> {{ record.height }}</p>
+    <p><strong class="text-white">Weight:</strong> {{ record.weight }}</p>
+    <p><strong class="text-white">Date Joined:</strong> {{ record.created_at|date:"F j, Y" }}</p>
+  </div>
+
+  <div class="mt-4 text-center">
+    <a href="{% url 'edit_record' record.id %}" class="text-decoration-none">
+      <button class="btn btn-light btn-shared">Edit Record</button>
+    </a>
+    <a href="{% url 'delete_record' record.id %}" class="text-decoration-none">
+      <button class="btn btn-light btn-shared" onclick="confirm('Are you sure you want to delete this record?')">Delete Record</button>
+    </a>
+    <div class="mt-4 text-center">
+    <a href="{% url 'dashboard' %}" class="text-decoration-none">
+      <button class="btn btn-light">← Back to Dashboard</button>
+    </a>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}">Django - CRM</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      {% if user.is_authenticated %}
+      <ul class="navbar-nav d-flex gap-2rem">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'dashboard' %}">
+            Dashboard <i class="fa fa-dashboard" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout' %}">
+            Logout <i class="fa fa-sign-out" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+      {% else %}
+      <ul class="navbar-nav d-flex gap-2rem">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'add_user' %}">
+            Register <i class="fa fa-home" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}">
+            Login <i class="fa fa-sign-out" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+</nav>
