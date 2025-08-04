@@ -2,6 +2,9 @@
 
 This is a Customer Relationship Management (CRM) system built with Django.
 
+Live Demo
+Access the live application here: https://alinist.pythonanywhere.com/home/
+
 ## Features
 
 - **User Authentication**
