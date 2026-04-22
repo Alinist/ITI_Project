@@ -34,6 +34,7 @@ Access the live application here: https://alinist.pythonanywhere.com/home/
     - Clear forms for registration, login, and record CRUD operations
     - Consistent layout with header, footer, and navigation components
 
+
 ## Setup & Installation
 
 1. Clone the repository:  
