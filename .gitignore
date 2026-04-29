@@ -18,7 +18,7 @@ ENV/
 # Environment variables
 .env
 
-# Static files (optional: if you collectstatic to a separate folder)
+# Static files
 staticfiles/
 
 # VSCode or IDE settings
